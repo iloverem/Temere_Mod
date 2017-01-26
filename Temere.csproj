@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{25CD4946-61BB-4F8B-A5D1-6DE43773646A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Temere</RootNamespace>
+    <AssemblyName>Temere</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Terraria">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Terraria\Terraria.exe</HintPath>
+    </Reference>
+    <Reference Include="tModLoader">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Terraria\tModLoader.exe</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dusts\FeatherDust.cs" />
+    <Compile Include="Items\Armor\GlowingMushroomHelmet.cs" />
+    <Compile Include="Items\Armor\GlowingMushroomPants.cs" />
+    <Compile Include="Items\Armor\GlowingMushroomShirt.cs" />
+    <Compile Include="Items\GlowingMushroomBow.cs" />
+    <Compile Include="Items\GlowingMushroomHammer.cs" />
+    <Compile Include="Items\NightmareBar.cs" />
+    <Compile Include="Items\PhobianInfusedHamaxe.cs" />
+    <Compile Include="Items\PhobianInfusedPick.cs" />
+    <Compile Include="Items\PhobianInfusedScabbard.cs" />
+    <Compile Include="Items\PhobianInfusedScabbardC.cs" />
+    <Compile Include="Items\VineSwordwrap.cs" />
+    <Compile Include="Items\Weapons\Fishtol.cs" />
+    <Compile Include="Items\Weapons\FishtolC.cs" />
+    <Compile Include="Items\Weapons\Lucidity.cs" />
+    <Compile Include="Items\Weapons\ObsidianBullet.cs" />
+    <Compile Include="Items\Weapons\ShroomySword.cs" />
+    <Compile Include="Items\Weapons\WoodenSlaphand.cs" />
+    <Compile Include="NPCs\HellChefDrop_Spice.cs" />
+    <Compile Include="NPCs\NightmareDrop_NightmareFuel.cs" />
+    <Compile Include="Projectiles\FeatherKnifeProj.cs" />
+    <Compile Include="Projectiles\ShroomSwordProj.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Temere.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="build.txt" />
+    <Content Include="Items\Armor\GlowingMushroomHelmet.png" />
+    <Content Include="Items\Armor\GlowingMushroomHelmet_Head.png" />
+    <Content Include="Items\Armor\GlowingMushroomPants.png" />
+    <Content Include="Items\Armor\GlowingMushroomPants_Legs.png" />
+    <Content Include="Items\Armor\GlowingMushroomShirt.png" />
+    <Content Include="Items\Armor\GlowingMushroomShirt_Arms.png" />
+    <Content Include="Items\Armor\GlowingMushroomShirt_Body.png" />
+    <Content Include="Items\Armor\GlowingMushroomShirt_FemaleBody.png" />
+    <Content Include="Items\NightmareBar.png" />
+    <Content Include="Items\PhobianInfusedScabbard.png" />
+    <Content Include="Items\PhobianInfusedScabbardC.png" />
+    <Content Include="Items\Weapons\Fishtol.png" />
+    <Content Include="Items\Weapons\FishtolC.png" />
+    <Content Include="Items\Weapons\ObsidianBullet.png" />
+    <Content Include="Items\Weapons\ShroomySword.png" />
+    <Content Include="Items\Weapons\WoodenSlaphand.png" />
+    <Content Include="NPCs\HellChefDrop_Spice.png" />
+    <Content Include="NPCs\NightmareDrop_NightmareFuel.png" />
+    <Content Include="Projectiles\ShroomSwordProj.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
